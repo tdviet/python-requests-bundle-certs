@@ -6,7 +6,7 @@ cert_link=https://raw.githubusercontent.com/tdviet/python-requests-bundle-certs/
 # Get path to Python requests certificate bundle
 cert_path=$(python -m requests.certs)
 
-if [ $? -ne 0 ]; then
+if [ $? -eq 0 ]; then
     # Certificate bundle found, first make a backup copy with timestamp
     timestamp=$(date +%s)
     cp $cert_path $cert_path.$timestamp.backup
