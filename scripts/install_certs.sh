@@ -15,7 +15,8 @@ if [ $? -eq 0 ]; then
     wget $cert_link -O $cert_path
 
 else
-    echo "Certificate bundle not found"
+    # Error, python requests package may be not installed
+    echo "Certificate bundle not found. You may have to install Python requests package"
 fi
 
 
