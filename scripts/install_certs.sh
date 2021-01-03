@@ -10,12 +10,20 @@ if [ $? -eq 0 ]; then
     # Certificate bundle found, first make a backup copy with timestamp
     timestamp=$(date +%s)
     cp $cert_path $cert_path.$timestamp.backup
-    echo "A backup copy of current certificate bundle is made at" $cert_path.$timestamp.backup
+    if [ $? -eq 0 ]; then
+        echo "A backup copy of current certificate bundle is made at" $cert_path.$timestamp.backup
+    else
+        echo "Error: Cannot make backup copy of current certificate bundle"
+        exit 1
+    fi
 
     # then download and overwrite the existing certificate bundle
     wget $cert_link -O $cert_path
-    echo "Certificate bundle with EGI Trust Anchor has been successfully installed"
-
+    if [ $? -eq 0 ]; then
+        echo "Certificate bundle with EGI Trust Anchor has been successfully installed"
+    else
+        echo "Error: Cannot download certificate bundle from" $cert_path
+    fi
 
 else
     # Error, python requests package may be not installed
