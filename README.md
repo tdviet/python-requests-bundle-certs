@@ -18,4 +18,4 @@ Change "python" to "python3" in the script if needed.
 
 `$ wget https://raw.githubusercontent.com/tdviet/python-requests-bundle-certs/main/scripts/install_certs.sh`
 
-`$ source install_certs.sh`
+`$ bash install_certs.sh`
