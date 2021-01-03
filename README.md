@@ -13,7 +13,8 @@ USE IT AT YOUR OWN RISK.
 ## Usage: 
 
 Download and execute the script ["install_certs.sh"](https://github.com/tdviet/python-requests-bundle-certs/blob/main/scripts/install_certs.sh).
-That will find the location of certificate bundle used by Python requests, make a backup copy then replace it with the certificate bundle from GitHub.
+That will find the location of certificate bundle used by Python requests, make a backup copy then replace it with the certificate bundle from GitHub. 
+Change "python" to "python3" in the script if needed.
 
 `$ wget https://raw.githubusercontent.com/tdviet/python-requests-bundle-certs/main/scripts/install_certs.sh`
 

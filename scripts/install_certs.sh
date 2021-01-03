@@ -4,7 +4,7 @@
 cert_link=https://raw.githubusercontent.com/tdviet/python-requests-bundle-certs/main/certs/ca-certificates.crt
 
 # Get path to Python requests certificate bundle
-cert_path=$(python -m requests.certs)
+cert_path=$(python3 -m requests.certs)
 
 if [ $? -eq 0 ]; then
     # Certificate bundle found, first make a backup copy with timestamp
