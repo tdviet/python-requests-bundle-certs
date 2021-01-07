@@ -8,7 +8,7 @@ cert_path=$(python3 -m requests.certs)
 
 if [ $? -eq 0 ]; then
     # Certificate bundle found, first make a backup copy with timestamp
-    timestamp=$(date +%s)
+    timestamp=$(date  +'%Y%m%d%H%M%S')
     cp $cert_path $cert_path.$timestamp.backup
     if [ $? -eq 0 ]; then
         echo "A backup copy of current certificate bundle is made at" $cert_path.$timestamp.backup
