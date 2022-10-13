@@ -2,7 +2,7 @@
 
 # Link to IGTF certificate bundle
 cert_link="https://dl.igtf.net/distribution/current/accredited/"
-cert_profiles=("classic" "mics" "slcs")
+cert_profiles=("classic" "mics")
 
 # Temporary directory
 TMP="/tmp/"
